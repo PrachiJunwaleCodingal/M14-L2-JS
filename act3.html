@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Act4- Class Static Methods</title>
+</head>
+
+<body>
+    <h2>Class Static Methods</h2>
+
+    <p id="r1"></p>
+    <p id="r2"></p>
+    <script>
+        class Person {
+            constructor(n) {
+                this.name = n;
+            }
+            static hello() {
+                return "Hello Everyone";
+            }
+            static intro(obj) {
+                return "My name is " + obj.name;
+            }
+
+        }
+        objperson = new Person("Prachi");
+        //static method uses classname to call(NOT using objects)
+        document.getElementById("r1").innerHTML = Person.hello();
+        document.getElementById("r2").innerHTML = Person.intro(objperson);
+    </script>
+</body>
+
+</html>

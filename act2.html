@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Act3- Inheritance</title>
+</head>
+
+<body>
+    <h2>Class Inheritance</h2>
+
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <script>
+        class Car {
+            constructor(brand) {
+                this.name = brand;
+            }
+            favorite() {
+                return 'My favorite car is ' + this.name;
+            }
+        }
+        class car1 extends Car {
+            constructor(brand, model) {
+                super(brand);   // to call the parent's constructor function
+                this.model = model;
+            }
+            show() {
+                return this.favorite() + ' and model is ' + this.model;
+            }
+        }
+        let objCar1 = new car1("BMW", "X6");
+        let objCar2 = new car1("Audi", "A3 Sports");
+        document.getElementById("result1").innerHTML = objCar1.show();
+        document.getElementById("result2").innerHTML = objCar2.show();
+        //Use the "extends" keyword to inherit all methods from another class.
+
+    </script>
+</body>
+
+</html>

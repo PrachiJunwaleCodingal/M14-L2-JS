@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Act1- JS This Keyword</title>
+    </head>
+
+<body>
+    <h2>this keyword</h2>
+
+    <p id="obj"></p>
+    <p id="fun"></p>
+    <script>
+        var student = {
+            Name: "Prachi",
+            RollNo: 10,
+            information: function () {
+                return this.Name + " " + this.RollNo;
+            }
+        };
+        function fun1(){return this; }
+         
+        document.getElementById("obj").innerHTML = student.information(); //student object     
+        document.getElementById("fun").innerHTML = fun1(); 
+         //function calling "own" objects with this keyword; refers to class objects
+    </script>
+</body>
+
+</html>
